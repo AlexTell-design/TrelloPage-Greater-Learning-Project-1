@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    
+    button{
+        background-color: rgb(223, 238, 255); border: none; padding-right: 50px; width: 170px; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; padding-top: 5px; padding-bottom: 5px;
+    }
+   input{
+    margin-left: 5px;
+   }
+   h4{
+    margin-left: 5px;
+   }
+   
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        background-color: aliceblue;
+        padding: 12px 16px;
+    }
+    .dropdown:hover .dropdown-content{
+        display: block;
+    }
+    .dropdown{
+        margin-top: -40px; margin-left: 145px;
+    }
+.form-control{
+    width: 150px; margin-top: 5px; 
+}
+.form-group{
+    display: grid; background-color: rgb(223, 238, 255); width: 170px; 
+}
+.form-group1{
+    border-top-left-radius: 3px; border-top-right-radius: 3px; background-color: rgb(223, 238, 255); width: 170px; height: 40px; padding-top: 1px; padding-bottom: 20px;
+}
+#addNew:hover{
+    background-color: white;
+}
+
+.form-group2{
+    display: grid; margin: 200px; margin-top: -165px; background-color: rgb(223, 238, 255); width: 170px; border-top-left-radius: 3px; border-top-right-radius: 3px;
+}
+.btn_button2{
+   display: grid; margin-top: -200px; margin-left: 200px; padding-top: 7px;
+}
+.btn_button2:hover{
+   background-color: white;
+}
+.form-group3{
+    display: grid; margin-top: -115px; margin-left: 800px; background-color: rgb(223, 238, 255); width: 170px; border-top-left-radius: 3px; border-top-right-radius: 3px;
+}
+.btn_button3{
+    display: grid; margin-left: 800px; text-indent: -45%; padding-top: 7px;
+}
+.btn_button3:hover{
+    background-color: white;
+}
+.form-group4{
+    display: grid; margin-top: -80px; margin-left: 1000px; width: 170px; height: 20px; padding-top: 20px;
+}
+.btn_button4{
+    display: grid; margin-left: 1000px; background-color: rgb(223, 238, 255); padding-right: 63px; margin-top: -40px; border-top-left-radius: 3px; border-top-right-radius: 3px; padding-top: 7px;
+}
+.btn_button4:hover{
+    background-color: white;
+}
+.btn_button2.active{
+    font-size: 0;
+
+}
+.btn_button2.active::after{
+    background-color: orange;
+    content: "Add Card";
+    font-size: 11pt;
+    width: 100px;
+    height: 25px;
+    padding-top: 6px;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    padding-right: 14px;
+    text-indent: 10px;
+    border-radius: 5px;
+}
+.btn_buttonX{
+    background: none;
+    font-size: x-large;
+    font-family: arial rounded MT Bold;
+    margin-left: 280px;
+    margin-top: -20px;
+}
+.popup{
+    border-radius: 2px;
+    visibility: hidden;
+}
+.open-popup{
+    visibility: visible;
+}
+.form-control1{
+    height: 20px; 
+}
+.form-control2{
+    height:40px;
+    width: 150px;
+    margin-top: 5px;
+
+}
+.form-group5{
+    margin-left: 1200px; background-color: rgb(223, 238, 255); height: 130px; width: 170px; margin-top: -60px; padding-top: 5px; padding-left: 5px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;
+}
+.form-control3{
+    height: 40px; margin-left: -0.5px; margin-top: 25px; width: 155px;
+}
+.form-group6{
+    background-color: rgb(223, 238, 255); width: 170px; padding-top: 5px; border-top-left-radius: 3px; border-top-right-radius: 3px; margin-left: 400px; margin-top: -115px; 
+}
+.btn_button6{
+    margin-left: 400px;
+}
+.btn_button6:hover{
+    background-color: white;
+}
+#dropdown6{
+    padding-bottom: 22px; margin-top: -46px; margin-left: 150px;
+}
+.form-group7{
+    background-color: rgb(223, 238, 255); width: 170px; padding-top: 5px; border-top-left-radius: 3px; border-top-right-radius: 3px; margin-left: 600px; margin-top: -115px;
+}
+.btn_button7{
+    margin-left: 600px;
+}
+.btn_button7:hover{
+    background-color: white;
+}
+#dropdown7{
+    padding-bottom: 25px; margin-top: -46px; margin-left: 150px;
+}
+
+.buttonX2{
+    background-color: orange;
+    font-size: 15px;
+    width: 100px;
+    height: 30px;
+    margin-top: 15px;
+    padding-right: 14px;
+    text-indent: 10px;
+    border-radius: 5px;
+}
+.btn_buttonX3{
+    background: none;
+    font-size: x-large;
+    font-family: arial rounded MT Bold;
+    margin-left: 110px;
+    margin-top: -30px;
+    display: flex;
+}
+body{
+    background-image: url(https://images.pexels.com/photos/9835861/pexels-photo-9835861.jpeg);
+    background-repeat: no-repeat;
+    background-size: 120%;
+    width: 1500px;
+}
+.line{ 
+    height: 50px; background-color: rgb(117, 176, 232) ; width: 110%; margin-left: -10px; margin-top: -10px; opacity: 70%;
+}
+.line2{
+height: 50px; background-color: rgb(181, 207, 230) ; width: 110%; margin-left: -10px; opacity: 30%;
+}
+.divB{
+    width: 30px; height: 30px; background-color: rgb(117, 176, 232); margin-top: -90px; margin-left: 10px; position: relative; z-index: 10;
+}
+.divB:hover{
+    background-color: orange;
+}
+.divC{
+    width: 70px; height: 30px; background-color: rgb(117, 176, 232); margin-top: -30px; margin-left: 50px; position: relative; z-index: 10;
+}
+.divC:hover{
+    background-color: orange;
+}
+.divD{
+    width: 80px; height: 30px; background-color: rgb(117, 176, 232); margin-top: -30px; margin-left: 130px; position: relative; z-index: 10;
+}
+.divD:hover{
+    background-color: orange;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif; font-size: 14pt; position: relative; z-index: 10; margin-top: -25px; color: white; margin-left: 700px; position: flex;
+}
+.divE{
+    width: 30px; height: 30px; background-color: rgb(117, 176, 232); margin-left: 1450px; margin-top: -45px; position: relative; z-index: 10;
+}
+.divE:hover{
+    background-color: orange;
+}
+.divF{
+    width: 30px; height: 30px; background-color: rgb(117, 176, 232); margin-left: 1410px; margin-top: -30px;  position: relative; z-index: 10;
+}
+.divF:hover{
+    background-color: orange;
+}
+.houseIcon{
+    width: 12px; height: 12px; background-color: white; margin-top: -18px; margin-bottom: 80px; position: relative; z-index: 10; margin-left: 18px;
+}
+.p2{
+    font-size: 10pt; margin-left: 70px; margin-top: -95px;
+}
+.line3{
+    width: 10px; height: 2px; background-color: white; position: relative; z-index: 10; margin-left: 1420px; margin-top: -22px;
+}
+.line4{
+    width: 2px; height: 10px; background-color: white; position: relative; z-index: 10; margin-left: 1424px; margin-top: -6px;
+}
+.divG{
+    width: 15px; height: 10px; background-color: white; position: relative; z-index: 10; margin-left: 1458px; margin-top: -5px; border-top-left-radius: 8px; border-top-right-radius: 8px;
+}
+.divH{
+    width: 10px; height: 10px; background-color: white; position: relative; z-index: 10; margin-left: 1461px; margin-top: -20px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;
+}
+.p3{
+    font-size: 10pt; margin-top: 40px; margin-left: 10px; padding-bottom: 80px;
+}
+.p4{
+    font-size: 10pt; margin-left: 1400px; margin-top: 40px;
+}
+.dot1{
+    width: 4px; height: 4px; background-color: white; position: relative; z-index: 10; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; margin-left: 1390px; margin-top: -28px;
+}
+.dot2{
+    width: 4px; height: 4px; background-color: white; position: relative; z-index: 10; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; margin-left: 1390px;
+}
+.dot3{
+    width: 4px; height: 4px; background-color: white; position: relative; z-index: 10; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; margin-left: 1390px;
+}
+.rect1{
+    width: 10px; height: 3px; background-color: white; position: relative; z-index: 10; margin-left: 55px; margin-top: -60px;
+}
+.rect2{
+    width: 10px; height: 3px; background-color: white; position: relative; z-index: 10; margin-top: 1px; margin-left: 55px;
+}
+.rect3{
+    width: 10px; height: 3px; background-color: white; position: relative; z-index: 10; margin-top: 1px; margin-left: 55px;
+}
+.roofIcon{ 
+    width: 0px; height: 0px; position: relative; z-index: 10; border-left: 50px solid transparent; border-right: 50px solid transparent; border-bottom: 50px solid white; scale: 0.2; margin-top: -185px; margin-left: -26px; margin-bottom: 100px;
+}
+
+</style>
+
+
+<body>
+    
+    <div class="line"></div>
+    <div class="line2"></div>
+    <div class="divB"></div>
+    <div class="divC"></div>
+    <div class="divD"></div>
+    <p>Tralala</p>
+    <div class="divE"></div>
+    <div class="divF"></div>
+    <div class="houseIcon"></div>
+    <p class="p2">Boards</p>
+    <div class="line3"></div>
+    <div class="line4"></div>
+    <div class="divG"></div>
+    <div class="divH"></div>
+    
+    <p class="p4">Show menu</p>
+    <div class="dot1"></div>
+    <div class="dot2"></div>
+    <div class="dot3"></div>
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <p class="p3">Frontend Training</p>
+    <div class="roofIcon"></div>
+    
+
+        <div class="form-group1">
+            <h4>To Do</h4>
+            <div class="dropdown">...<div class="dropdown-content">Clear List</div></div>
+            
+        </div>
+        <div class="form-group" id="ToDo" name="ToDo">
+            <input name="learnHTML" class="form-control" placeholder="Learn HTML" type="text">
+            <input name="LearnCSS" class="form-control" placeholder="Learn CSS" type="text">
+            <input name="LearnJavaScript" class="form-control" placeholder="Learn JavaScript" type="text">
+        </div>
+            <button id="addNew" type="submit" class="btn btn-primary" name="button">+ Add another card</button>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+$('#addNew').on('click',function(){
+        $('#ToDo').append('<div class="form-group" id="newLearn"><input name="newSkill" class="form-control" placeholder="Enter Learn Skill"></div>');
+    });
+    </script>
+
+        <div class="form-group2" id="Doing" name="Doing">
+            <h4 class="Doing">Doing</h4>
+            <div class="dropdown">...<div class="dropdown-content">Clear List</div></div>
+            <input name="PrepareResume" class="form-control" placeholder="Prepare Resume" type="text">
+            
+        </div>
+            <button id="addNew2" type="submit" class="btn_button2" name="button2" onclick="openPopup()">+ Add another card</button>
+    <script>
+$('#addNew2').on('click',function(){
+        $('#Doing').append('<div class="form-group" id="newLearn"><input name="newSkill" class="form-control" placeholder="Enter a title for this card..."></div>');
+    });
+    </script>
+
+<div class="form-group6" id="Testing_Verifying">
+            <h4 class="Testing-Verifying">Testing/Verifying</h4>
+            <div id="dropdown6" class="dropdown">...<div class="dropdown-content">Clear List</div></div>
+            <input name="TwitterAppFrontend" class="form-control" placeholder="Twitter app frontend" type="text">
+            
+             </div>
+      <button id="addNew6" type="submit" class="btn_button6" name="button6">+ Add another card</button>
+        <script>
+    $('#addNew6').on('click',function(){
+        $('#Testing_Verifying').append('<div class="form-group" id="newLearn"><input name="newSkill" class="form-control" placeholder="Add another card"></div>');
+    });
+    </script>
+
+        <div class="form-group7" id="Deploying">
+            <h4 class="Deploy">Deploying</h4>
+            <div id="dropdown7" class="dropdown">...<div class="dropdown-content">Clear List</div></div>
+            <input name="input7" class="form-control" placeholder="Twitter app backend" type="text">
+        </div>
+        <button id="addNew7" type="submit" class="btn_button7" name="button7">+ Add another card</button>
+        <script>
+    $('#addNew7').on('click',function(){
+        $('#Deploying').append('<div class="form-group" id="newLearn"><input name="newSkill" class="form-control" placeholder="Enter Learn Skill"></div>');
+    });
+    </script>
+
+        <div class="form-group3" id="Done">
+            <h4 class="Done">Done</h4>
+            <div class="dropdown">...<div class="dropdown-content">Clear List</div></div>
+            
+        </div>
+            <button id="addNew3" type="submit" class="btn_button3" name="button3">+ Add card</button>
+    <script>
+    $('#addNew3').on('click',function(){
+        $('#Done').append('<div class="form-group" id="newLearn"><input name="newSkill" class="form-control" placeholder="Enter Learn Skill"></div>');
+    });
+    </script>
+
+
+        <div class="form-group4" id="addlist">
+        </div>
+            <button id="addNew4" type="submit" class="btn_button4" name="button4">+Add another list</button>
+        <div class="popup" id="popup"> 
+            <button id="popup" class="btn_buttonX">X</button>     
+        </div>
+        <script>
+    $('#addNew4').on('click',function(){
+        $('#addlist').append('<div class="form-group" id="newLearn"><input name="newSkill" class="form-control" placeholder="Enter list title..."></div>');
+    });
+    </script>
+
+        
+    
+    <div class="form-group5" id="addlist">
+        <input name="EnterListTitle" class="form-control3" placeholder="Enter list title..." type="text">
+        <button class="buttonX2">Add List</button>
+        <button id="popup" class="btn_buttonX3">X</button>
+    </div>
+    
+
+    
+    
+    
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+    </script>
+    <script>
+        const btn_button2 = document.querySelector('.btn_button2');
+btn_button2.addEventListener('click', () => {
+  btn_button2.classList.add('active');
+  btn_button2.textContent = 'Add Card';
+});
+    </script>
+</body>
+</html>
